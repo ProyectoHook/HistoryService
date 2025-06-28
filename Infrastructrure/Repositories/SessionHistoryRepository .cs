@@ -22,7 +22,7 @@ namespace Infrastructrure.Repositories
         {
             _context = context;
         }
-        public async Task<SlideStatsDto> GetSlideStatsAsync(int sessionId, int slideId, string correctAnswer)
+        public async Task<SlideStatsDto> GetSlideStatsAsync(Guid sessionId, int slideId, string correctAnswer)
         {
             return await _context.SessionHistories
             .Where(h => h.SessionId == sessionId && h.OriginalSlideId == slideId && h.UserAnswer != null)
@@ -36,40 +36,32 @@ namespace Infrastructrure.Repositories
             .FirstOrDefaultAsync();
         }
 
-        public async Task<List<UserResponseDto>> GetUserResponsesAsync(int sessionId, int slideId, string correctAnswer)
+        public async Task<IEnumerable<SessionHistory>> GetUserResponsesAsync(Guid sessionId, int slideId, string correctAnswer)
         {
             return await _context.SessionHistories
             .Where(h => h.SessionId == sessionId &&
                         h.OriginalSlideId == slideId &&
                         h.UserAnswer != null)
-            .Select(h => new UserResponseDto
-            {
-                UserId = h.UserHistory.Id,
-                UserName = h.UserHistory.Name,
-                UserAnswer = h.UserAnswer,
-                IsCorrect = h.UserAnswer == correctAnswer,
-                TimeElapsed = h.TimeElapsed ?? TimeSpan.Zero, 
-                ResponseDate = h.Timestamp,
-            })
+            
             .ToListAsync();
         }
 
-        public async Task RegisterSlideChangeForUsersAsync(int sessionId, SlideSnapshotDto slideSnapshot, List<Guid> userIds, Guid UserCreate)
+        public async Task RegisterSlideChangeForUsersAsync(Guid sessionId, SlideSnapshotDto slideSnapshot, List<UserInSessionDto> users, Guid UserCreate)
         {
-
+            var userIds = users.Select(u => u.UserId).ToList();
             var existingUsers = await _context.UserHistories
                 .Where(u => userIds.Contains(u.Id))
                 .Select(u => u.Id)
                 .ToListAsync();
 
-            var missingUserIds = userIds.Except(existingUsers).ToList();
+            var missingUsers = users.Where(u => !existingUsers.Contains(u.UserId)).ToList();
 
-            foreach (var missingId in missingUserIds)
+            foreach (var missingUser in missingUsers)
             {
                 _context.UserHistories.Add(new UserHistory
                 {
-                    Id = missingId,
-                    Name = $"Usuario {missingId}"
+                    Id = missingUser.UserId,
+                    Name = missingUser.Name
                 });
             }
             await _context.SaveChangesAsync();
@@ -92,13 +84,13 @@ namespace Infrastructrure.Repositories
             await _context.SaveChangesAsync(); // Para generar SlideHistory.Id
             
             // Crear un registro por cada usuario conectado
-            foreach (var userId in userIds)
+            foreach (var userId in users)
             {
                 var entry = new SessionHistory
                 {
                     SessionId = sessionId,
                     UserCreate = UserCreate,
-                    UserHistoryId = userId,
+                    UserHistoryId = userId.UserId,
                     SlideHistoryId = slideHistory.Id,
                     OriginalSlideId = slideHistory.OriginalSlideId,
                     Timestamp = timestamp
@@ -111,7 +103,7 @@ namespace Infrastructrure.Repositories
         }
 
 
-        public async Task<Guid> RegisterUserAnswerAsync(int sessionId, int slideId, Guid userId, string answer, TimeSpan timeElapsed)
+        public async Task<Guid> RegisterUserAnswerAsync(Guid sessionId, int slideId, Guid userId, string answer, TimeSpan timeElapsed)
         {
             var entry = await _context.SessionHistories
             .Where(h => h.SessionId == sessionId &&
@@ -119,7 +111,7 @@ namespace Infrastructrure.Repositories
                         h.UserHistoryId == userId)
             .OrderByDescending(h => h.Timestamp)
             .FirstOrDefaultAsync();
-            Console.WriteLine(entry.OriginalSlideId);
+            //Console.WriteLine(entry.OriginalSlideId);
             if (entry != null)
             {
                 entry.UserAnswer = answer;
@@ -142,6 +134,16 @@ namespace Infrastructrure.Repositories
             return userId;
         }
 
-        
+        public async Task<IEnumerable<UserHistory>> GetUsersInSessionAsync(Guid sessionId)
+        {
+            return await _context.SessionHistories
+                .Where(sh => sh.SessionId == sessionId)
+                .Select(sh => sh.UserHistory)
+                .Distinct()
+                
+                .ToListAsync();
+        }
+
+
     }
 }

@@ -10,8 +10,8 @@ namespace Application.Commands
 {
     public class RegisterSlideChangeCommand : IRequest<Unit>
     {
-        public int SessionId { get; set; }
+        public Guid SessionId { get; set; }
         public SlideSnapshotDto SlideSnapshot { get; set; }
-        public List<Guid> ConnectedUserIds { get; set; }
+        public List<UserInSessionDto> ConnectedUserIds { get; set; }
     }
 }

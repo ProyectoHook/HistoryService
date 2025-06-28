@@ -55,8 +55,8 @@ namespace Infrastructrure.Migrations
                     b.Property<int>("OriginalSlideId")
                         .HasColumnType("int");
 
-                    b.Property<int>("SessionId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("SessionId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("SlideHistoryId")
                         .HasColumnType("int");

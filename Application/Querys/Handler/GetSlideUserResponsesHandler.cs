@@ -25,7 +25,17 @@ namespace Application.Querys.Handler
         public async Task<List<UserResponseDto>> Handle(GetSlideUserResponsesQuery request, CancellationToken cancellationToken)
         {
             var correctAnswer = await _slideRepository.GetCorrectAnswerAsync(request.SlideId);
-            return await _sessionHistoryRepository.GetUserResponsesAsync(request.SessionId, request.SlideId, correctAnswer);
+            var usersRespons = await _sessionHistoryRepository.GetUserResponsesAsync(request.SessionId, request.SlideId, correctAnswer);
+            
+            return usersRespons.Select(h => new UserResponseDto
+            {
+                UserId = h.UserHistory.Id,
+                UserName = h.UserHistory.Name,
+                UserAnswer = h.UserAnswer,
+                IsCorrect = h.UserAnswer == correctAnswer,
+                TimeElapsed = h.TimeElapsed ?? TimeSpan.Zero,
+                ResponseDate = h.Timestamp,
+            }).ToList();
         }
     }
 }

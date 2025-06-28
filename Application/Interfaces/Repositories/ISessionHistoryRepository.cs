@@ -4,15 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Application.DTOs;
+using Domain.Entities;
 
 namespace Application.Interfaces.Repositories
 {
     public interface ISessionHistoryRepository
     {
-        Task RegisterSlideChangeForUsersAsync(int sessionId, SlideSnapshotDto slideSnapshot, List<Guid> userIds, Guid UserCreate);
-        Task<Guid> RegisterUserAnswerAsync(int sessionId, int slideId, Guid userId, string answer, TimeSpan timeElapsed);
-        Task<SlideStatsDto> GetSlideStatsAsync(int sessionId, int slideId, string correctAnswer);
-        Task<List<UserResponseDto>> GetUserResponsesAsync(int sessionId, int slideId, string correctAnswer);
-        
+        Task RegisterSlideChangeForUsersAsync(Guid sessionId, SlideSnapshotDto slideSnapshot, List<UserInSessionDto> userIds, Guid UserCreate);
+        Task<Guid> RegisterUserAnswerAsync(Guid sessionId, int slideId, Guid userId, string answer, TimeSpan timeElapsed);
+        Task<SlideStatsDto> GetSlideStatsAsync(Guid sessionId, int slideId, string correctAnswer);
+        Task<IEnumerable<SessionHistory>> GetUserResponsesAsync(Guid sessionId, int slideId, string correctAnswer);
+        Task<IEnumerable<UserHistory>> GetUsersInSessionAsync(Guid sessionId);
+
     }
 }

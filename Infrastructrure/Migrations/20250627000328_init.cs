@@ -64,7 +64,7 @@ namespace Infrastructrure.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    SessionId = table.Column<int>(type: "int", nullable: false),
+                    SessionId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UserCreate = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     UserHistoryId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     OriginalSlideId = table.Column<int>(type: "int", nullable: false),

@@ -8,9 +8,8 @@ using MediatR;
 
 namespace Application.Querys
 {
-    public class GetSlideResponseStatsQuery : IRequest<SlideStatsDto>
+    public class GetUsersInSessionQuery : IRequest<List<UserInSessionDto>>
     {
         public Guid SessionId { get; set; }
-        public int SlideId { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace Domain.Entities
     {
         public int Id { get; set; }
 
-        public int SessionId { get; set; }
+        public Guid SessionId { get; set; }
         public Guid UserCreate { get; set; }
 
         public Guid UserHistoryId { get; set; }

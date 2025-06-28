@@ -10,7 +10,7 @@ namespace Application.Querys
 {
     public class GetSlideUserResponsesQuery : IRequest<List<UserResponseDto>>
     {
-        public int SessionId { get; set; }
+        public Guid SessionId { get; set; }
         public int SlideId { get; set; }
     }
 }

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructrure.Migrations
 {
     [DbContext(typeof(ServiceContext))]
-    [Migration("20250531051403_init")]
+    [Migration("20250627000328_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -58,8 +58,8 @@ namespace Infrastructrure.Migrations
                     b.Property<int>("OriginalSlideId")
                         .HasColumnType("int");
 
-                    b.Property<int>("SessionId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("SessionId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("SlideHistoryId")
                         .HasColumnType("int");
