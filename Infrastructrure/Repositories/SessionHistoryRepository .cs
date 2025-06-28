@@ -66,6 +66,15 @@ namespace Infrastructrure.Repositories
             }
             await _context.SaveChangesAsync();
 
+            // Validar si ya existe este slide en esta sesión
+            var slideAlreadyExists = await _context.SessionHistories
+                .AnyAsync(sh => sh.SessionId == sessionId && sh.OriginalSlideId == slideSnapshot.Id);
+
+            if (slideAlreadyExists)
+            {
+                return; // Evitar duplicados
+            }
+
             var timestamp = DateTime.UtcNow;
 
            
