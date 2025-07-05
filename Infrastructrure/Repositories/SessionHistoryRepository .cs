@@ -153,6 +153,119 @@ namespace Infrastructrure.Repositories
                 .ToListAsync();
         }
 
+        public async Task<SessionReconstructionDto> ReconstructSessionAsync(Guid sessionId)
+        {
+            // Primero obtener solo los IDs de los slides distintos
+            var distinctSlideIds = await _context.SessionHistories
+                .Where(sh => sh.SessionId == sessionId)
+                .Select(sh => sh.SlideHistoryId)
+                .Distinct()
+                .ToListAsync();
+
+            // Luego obtener la información completa de cada slide
+            var slides = new List<dynamic>();
+            foreach (var slideId in distinctSlideIds)
+            {
+                var slide = await _context.SlideHistories
+                    .Where(s => s.Id == slideId)
+                    .Select(s => new
+                    {
+                        SlideHistoryId = s.Id,
+                        s.OriginalSlideId,
+                        s.Ask,
+                        s.AnswerCorrect,
+                        Options = s.Options.Select(o => o.OptionText).ToList()
+                    })
+                    .FirstOrDefaultAsync();
+
+                if (slide != null)
+                {
+                    slides.Add(slide);
+                }
+            }
+
+            // Obtener todos los usuarios únicos que participaron en la sesión
+            var users = await _context.SessionHistories
+                .Where(sh => sh.SessionId == sessionId)
+                .Select(sh => new
+                {
+                    sh.UserHistoryId,
+                    sh.UserHistory.Name
+                })
+                .Distinct()
+                .ToListAsync();
+
+            // Obtener todas las respuestas de los usuarios para cada slide
+            var userResponses = await _context.SessionHistories
+                .Where(sh => sh.SessionId == sessionId)
+                .Select(sh => new
+                {
+                    sh.SlideHistoryId,
+                    sh.SlideHistory.OriginalSlideId,
+                    sh.UserHistoryId,
+                    sh.UserAnswer,
+                    sh.TimeElapsed,
+                    IsCorrect = sh.UserAnswer != null && sh.UserAnswer == sh.SlideHistory.AnswerCorrect
+                })
+                .ToListAsync();
+
+            // Calcular estadísticas por slide
+            var slideStats = slides.Select(s => {
+                var responsesForSlide = userResponses.Where(ur => ur.SlideHistoryId == s.SlideHistoryId).ToList();
+                var totalResponses = responsesForSlide.Count(ur => ur.UserAnswer != null);
+                var correctResponses = responsesForSlide.Count(ur => ur.IsCorrect);
+
+                double? accuracy = totalResponses > 0 ? (double)correctResponses / totalResponses * 100 : null;
+
+                return new
+                {
+                    s.SlideHistoryId,
+                    Accuracy = accuracy
+                };
+            }).ToList();
+
+            // Calcular estadísticas totales
+            var allResponses = userResponses.Where(ur => ur.UserAnswer != null).ToList();
+            var totalQuestions = slides.Count;
+            var totalCorrect = allResponses.Count(ur => ur.IsCorrect);
+            var totalAnswered = allResponses.Count;
+
+            double? totalAccuracy = totalAnswered > 0 ? (double)totalCorrect / totalAnswered * 100 : null;
+            
+
+            // Construir el objeto de resultado
+            var result = new SessionReconstructionDto
+            {
+                SessionId = sessionId,
+                Slides = slides.Select(s => new SlideReconstructionDto
+                {
+                    SlideHistoryId = s.SlideHistoryId,
+                    OriginalSlideId = s.OriginalSlideId,
+                    Question = s.Ask,
+                    CorrectAnswer = s.AnswerCorrect,
+                    Options = s.Options,
+                    AccuracyPercentage = slideStats.FirstOrDefault(ss => ss.SlideHistoryId == s.SlideHistoryId)?.Accuracy,
+                    UserResponses = users.Select(u => new UserResponsesDto
+                    {
+                        UserId = u.UserHistoryId,
+                        UserName = u.Name,
+                        Answer = userResponses
+                            .FirstOrDefault(ur => ur.SlideHistoryId == s.SlideHistoryId && ur.UserHistoryId == u.UserHistoryId)?
+                            .UserAnswer,
+                        TimeElapsed = userResponses
+                            .FirstOrDefault(ur => ur.SlideHistoryId == s.SlideHistoryId && ur.UserHistoryId == u.UserHistoryId)?
+                            .TimeElapsed,
+                        IsCorrect = userResponses
+                            .FirstOrDefault(ur => ur.SlideHistoryId == s.SlideHistoryId && ur.UserHistoryId == u.UserHistoryId)?
+                            .IsCorrect
+                    }).ToList()
+                }).ToList(),
+                TotalAccuracyPercentage = totalAccuracy
+            };
+
+            return result;
+        }
+
 
     }
 }

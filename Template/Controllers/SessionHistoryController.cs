@@ -57,26 +57,21 @@ namespace Template.Controllers
         [HttpGet("{sessionId}/slide/{slideId}/stats")]
         public async Task<ActionResult<SlideStatsDto>> GetSlideStats(Guid sessionId, int slideId)
         {
-            var stats = await _mediator.Send(new GetSlideResponseStatsQuery { SessionId =sessionId, SlideId=slideId });
+            var stats = await _mediator.Send(new GetSlideResponseStatsQuery { SessionId = sessionId, SlideId = slideId });
             return Ok(stats);
         }
 
-        // 4. Obtener respuestas de usuarios por slide
-        [HttpGet("{sessionId}/slide/{slideId}/responses")]
-        public async Task<ActionResult<List<UserResponseDto>>> GetUserResponses(Guid sessionId, int slideId)
+
+
+
+        [HttpGet("{sessionId}/metricas")]
+        public async Task<ActionResult<SessionReconstructionDto>> ReconstructSession(Guid sessionId)
         {
-            var responses = await _mediator.Send(new GetSlideUserResponsesQuery{ SessionId = sessionId, SlideId = slideId });
-            return Ok(responses);
+            var reconstruction = await _mediator.Send(new GetSessionHistoryQuery { SessionId = sessionId });
+            return Ok(reconstruction);
+
+
+
         }
-
-        [HttpGet("{sessionId}/users")]
-        public async Task<ActionResult<List<UserInSessionDto>>> GetUsersInSession(Guid sessionId)
-        {
-            var users = await _mediator.Send(new GetUsersInSessionQuery{SessionId = sessionId});
-            return Ok(users);
-        }
-
-
-
     }
 }

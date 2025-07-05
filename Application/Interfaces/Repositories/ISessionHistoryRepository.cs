@@ -15,6 +15,7 @@ namespace Application.Interfaces.Repositories
         Task<SlideStatsDto> GetSlideStatsAsync(Guid sessionId, int slideId, string correctAnswer);
         Task<IEnumerable<SessionHistory>> GetUserResponsesAsync(Guid sessionId, int slideId, string correctAnswer);
         Task<IEnumerable<UserHistory>> GetUsersInSessionAsync(Guid sessionId);
+        Task<SessionReconstructionDto> ReconstructSessionAsync(Guid sessionId);
 
     }
 }
