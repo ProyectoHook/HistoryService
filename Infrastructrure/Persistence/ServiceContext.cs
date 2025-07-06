@@ -58,6 +58,7 @@ namespace Infrastructrure.Persistence
                 entity.Property(e => e.UserCreate).IsRequired();
                 entity.Property(e => e.SessionId).IsRequired();
                 entity.Property(e => e.Timestamp).IsRequired();
+                entity.Property(e => e.PresentationId).IsRequired();
 
                 entity.Property(e => e.UserAnswer);
                 entity.Property(e => e.TimeElapsed);

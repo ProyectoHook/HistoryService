@@ -37,7 +37,10 @@ namespace Template.Controllers
                     Ask = request.Ask,
                     AnswerCorrect = request.AnswerCorrect,
                     Options = request.Options
-                }
+                },
+                UserCreateId = request.UserCreateId,
+                PresentationId = request.presentationId
+
             };
 
             await _mediator.Send(command);

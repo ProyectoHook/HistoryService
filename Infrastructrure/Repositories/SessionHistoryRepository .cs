@@ -46,7 +46,7 @@ namespace Infrastructrure.Repositories
             .ToListAsync();
         }
 
-        public async Task RegisterSlideChangeForUsersAsync(Guid sessionId, SlideSnapshotDto slideSnapshot, List<UserInSessionDto> users, Guid UserCreate)
+        public async Task RegisterSlideChangeForUsersAsync(Guid sessionId, SlideSnapshotDto slideSnapshot, List<UserInSessionDto> users, Guid UserCreate, int PresentationId)
         {
             var userIds = users.Select(u => u.UserId).ToList();
             var existingUsers = await _context.UserHistories
@@ -102,7 +102,8 @@ namespace Infrastructrure.Repositories
                     UserHistoryId = userId.UserId,
                     SlideHistoryId = slideHistory.Id,
                     OriginalSlideId = slideHistory.OriginalSlideId,
-                    Timestamp = timestamp
+                    Timestamp = timestamp,
+                    PresentationId = PresentationId
                 };
 
                 _context.SessionHistories.Add(entry);
@@ -135,7 +136,8 @@ namespace Infrastructrure.Repositories
                     UserHistoryId = userId,
                     UserAnswer = answer,
                     TimeElapsed = timeElapsed,
-                    Timestamp = DateTime.UtcNow
+                    Timestamp = DateTime.UtcNow,
+                    PresentationId = entry.PresentationId
                 });
             }
 
@@ -260,7 +262,11 @@ namespace Infrastructrure.Repositories
                             .IsCorrect
                     }).ToList()
                 }).ToList(),
-                TotalAccuracyPercentage = totalAccuracy
+                TotalAccuracyPercentage = totalAccuracy,
+                PresentationId = _context.SessionHistories
+                    .Where(sh => sh.SessionId == sessionId)
+                    .Select(sh => sh.PresentationId)
+                    .FirstOrDefault()
             };
 
             return result;

@@ -3,20 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8EFCD7A8-C73C-4F77-9862-2DE4D0EBE384}|Template\\Template.csproj|c:\\users\\matia\\onedrive\\desktop\\proyecto-slidex\\historico\\historyservice\\template\\controllers\\sessionhistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8EFCD7A8-C73C-4F77-9862-2DE4D0EBE384}|Template\\Template.csproj|solutionrelative:template\\controllers\\sessionhistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F5F82D3E-9CC4-4B56-8C3A-693AF54E15AC}|Infrastructrure\\Infrastructrure.csproj|c:\\users\\matia\\onedrive\\desktop\\proyecto-slidex\\historico\\historyservice\\infrastructrure\\repositories\\sessionhistoryrepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5F82D3E-9CC4-4B56-8C3A-693AF54E15AC}|Infrastructrure\\Infrastructrure.csproj|solutionrelative:infrastructrure\\repositories\\sessionhistoryrepository .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|c:\\users\\matia\\onedrive\\desktop\\proyecto-slidex\\historico\\historyservice\\application\\commands\\handler\\registerslidechangehandler .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|solutionrelative:application\\commands\\handler\\registerslidechangehandler .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|c:\\users\\matia\\onedrive\\desktop\\proyecto-slidex\\historico\\historyservice\\application\\dtos\\sessionreconstructiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|solutionrelative:application\\dtos\\sessionreconstructiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|c:\\users\\matia\\onedrive\\desktop\\proyecto-slidex\\historico\\historyservice\\application\\dtos\\slidereconstructiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|solutionrelative:application\\dtos\\slidereconstructiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15C6CF43-AE66-4283-8CA1-93FFE2D0D12A}|Domain\\Domain.csproj|c:\\users\\matia\\onedrive\\desktop\\proyecto-slidex\\historico\\historyservice\\domain\\entities\\sessionhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15C6CF43-AE66-4283-8CA1-93FFE2D0D12A}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\sessionhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8EFCD7A8-C73C-4F77-9862-2DE4D0EBE384}|Template\\Template.csproj|c:\\users\\matia\\onedrive\\desktop\\proyecto-slidex\\historico\\historyservice\\template\\controllers\\sessionhistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EFCD7A8-C73C-4F77-9862-2DE4D0EBE384}|Template\\Template.csproj|solutionrelative:template\\controllers\\sessionhistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F5F82D3E-9CC4-4B56-8C3A-693AF54E15AC}|Infrastructrure\\Infrastructrure.csproj|c:\\users\\matia\\onedrive\\desktop\\proyecto-slidex\\historico\\historyservice\\infrastructrure\\persistence\\servicecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5F82D3E-9CC4-4B56-8C3A-693AF54E15AC}|Infrastructrure\\Infrastructrure.csproj|solutionrelative:infrastructrure\\persistence\\servicecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|c:\\users\\matia\\onedrive\\desktop\\proyecto-slidex\\historico\\historyservice\\application\\interfaces\\repositories\\isessionhistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|solutionrelative:application\\interfaces\\repositories\\isessionhistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|c:\\users\\matia\\onedrive\\desktop\\proyecto-slidex\\historico\\historyservice\\application\\commands\\registerslidechangecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|solutionrelative:application\\commands\\registerslidechangecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|c:\\users\\matia\\onedrive\\desktop\\proyecto-slidex\\historico\\historyservice\\application\\request\\slidesnapshotrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|solutionrelative:application\\request\\slidesnapshotrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|c:\\users\\matia\\onedrive\\desktop\\proyecto-slidex\\historico\\historyservice\\application\\querys\\getslideresponsestatsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|solutionrelative:application\\querys\\getslideresponsestatsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|c:\\users\\matia\\onedrive\\desktop\\proyecto-slidex\\historico\\historyservice\\application\\querys\\handler\\getsessionhistoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,16 +51,12 @@
       "RelativeMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|solutionrelative:application\\querys\\getsessionhistoryquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|c:\\users\\matia\\onedrive\\desktop\\proyecto-slidex\\historico\\historyservice\\application\\dtos\\slidereconstructiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|solutionrelative:application\\dtos\\slidereconstructiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|c:\\users\\matia\\onedrive\\desktop\\proyecto-slidex\\historico\\historyservice\\application\\querys\\handler\\getslideresponsestatshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|solutionrelative:application\\querys\\handler\\getslideresponsestatshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|c:\\users\\matia\\onedrive\\desktop\\proyecto-slidex\\historico\\historyservice\\application\\querys\\getslideresponsestatsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|solutionrelative:application\\querys\\getslideresponsestatsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|c:\\users\\matia\\onedrive\\desktop\\proyecto-slidex\\historico\\historyservice\\application\\interfaces\\repositories\\isessionhistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F14C687-8806-423F-BBF4-06D6A86894C2}|Application\\Application.csproj|solutionrelative:application\\interfaces\\repositories\\isessionhistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,37 +66,102 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1243,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "ServiceContext.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Infrastructrure\\Persistence\\ServiceContext.cs",
+              "RelativeDocumentMoniker": "Infrastructrure\\Persistence\\ServiceContext.cs",
+              "ToolTip": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Infrastructrure\\Persistence\\ServiceContext.cs",
+              "RelativeToolTip": "Infrastructrure\\Persistence\\ServiceContext.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAmwDwAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T01:46:12.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SessionHistory.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Domain\\Entities\\SessionHistory.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\SessionHistory.cs",
+              "ToolTip": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Domain\\Entities\\SessionHistory.cs",
+              "RelativeToolTip": "Domain\\Entities\\SessionHistory.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T01:45:47.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SlideSnapshotRequest.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Application\\Request\\SlideSnapshotRequest.cs",
+              "RelativeDocumentMoniker": "Application\\Request\\SlideSnapshotRequest.cs",
+              "ToolTip": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Application\\Request\\SlideSnapshotRequest.cs",
+              "RelativeToolTip": "Application\\Request\\SlideSnapshotRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T01:31:43.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RegisterSlideChangeCommand.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Application\\Commands\\RegisterSlideChangeCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Commands\\RegisterSlideChangeCommand.cs",
+              "ToolTip": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Application\\Commands\\RegisterSlideChangeCommand.cs",
+              "RelativeToolTip": "Application\\Commands\\RegisterSlideChangeCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T01:32:40.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegisterSlideChangeHandler .cs",
+              "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Application\\Commands\\Handler\\RegisterSlideChangeHandler .cs",
+              "RelativeDocumentMoniker": "Application\\Commands\\Handler\\RegisterSlideChangeHandler .cs",
+              "ToolTip": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Application\\Commands\\Handler\\RegisterSlideChangeHandler .cs",
+              "RelativeToolTip": "Application\\Commands\\Handler\\RegisterSlideChangeHandler .cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAWwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-06T01:31:58.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "SessionHistoryRepository .cs",
               "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Infrastructrure\\Repositories\\SessionHistoryRepository .cs",
               "RelativeDocumentMoniker": "Infrastructrure\\Repositories\\SessionHistoryRepository .cs",
               "ToolTip": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Infrastructrure\\Repositories\\SessionHistoryRepository .cs",
               "RelativeToolTip": "Infrastructrure\\Repositories\\SessionHistoryRepository .cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAYwCMAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAIwH8AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-04T21:11:51.85Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "SessionHistoryController.cs",
               "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Template\\Controllers\\SessionHistoryController.cs",
               "RelativeDocumentMoniker": "Template\\Controllers\\SessionHistoryController.cs",
               "ToolTip": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Template\\Controllers\\SessionHistoryController.cs",
               "RelativeToolTip": "Template\\Controllers\\SessionHistoryController.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAywD8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAswD8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-04T21:00:42.727Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "GetSlideResponseStatsHandler.cs",
               "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Application\\Querys\\Handler\\GetSlideResponseStatsHandler.cs",
               "RelativeDocumentMoniker": "Application\\Querys\\Handler\\GetSlideResponseStatsHandler.cs",
@@ -84,12 +169,11 @@
               "RelativeToolTip": "Application\\Querys\\Handler\\GetSlideResponseStatsHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAwwCAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-04T20:53:23.326Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-04T20:53:23.326Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "GetSlideResponseStatsQuery.cs",
               "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Application\\Querys\\GetSlideResponseStatsQuery.cs",
               "RelativeDocumentMoniker": "Application\\Querys\\GetSlideResponseStatsQuery.cs",
@@ -102,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "GetSessionHistoryHandler.cs",
               "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Application\\Querys\\Handler\\GetSessionHistoryHandler.cs",
               "RelativeDocumentMoniker": "Application\\Querys\\Handler\\GetSessionHistoryHandler.cs",
@@ -115,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "GetSessionHistoryQuery.cs",
               "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Application\\Querys\\GetSessionHistoryQuery.cs",
               "RelativeDocumentMoniker": "Application\\Querys\\GetSessionHistoryQuery.cs",
@@ -128,20 +212,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "ISessionHistoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Application\\Interfaces\\Repositories\\ISessionHistoryRepository.cs",
               "RelativeDocumentMoniker": "Application\\Interfaces\\Repositories\\ISessionHistoryRepository.cs",
               "ToolTip": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Application\\Interfaces\\Repositories\\ISessionHistoryRepository.cs",
               "RelativeToolTip": "Application\\Interfaces\\Repositories\\ISessionHistoryRepository.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBEAAABPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-04T20:49:49.667Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
               "Title": "SlideReconstructionDto.cs",
               "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Application\\DTOs\\SlideReconstructionDto.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\SlideReconstructionDto.cs",
@@ -149,18 +233,17 @@
               "RelativeToolTip": "Application\\DTOs\\SlideReconstructionDto.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwBAAAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-04T20:45:27.533Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-04T20:45:27.533Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "SessionReconstructionDto.cs",
               "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Application\\DTOs\\SessionReconstructionDto.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\SessionReconstructionDto.cs",
               "ToolTip": "C:\\Users\\matia\\OneDrive\\Desktop\\Proyecto-SlideX\\Historico\\HistoryService\\Application\\DTOs\\SessionReconstructionDto.cs",
               "RelativeToolTip": "Application\\DTOs\\SessionReconstructionDto.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-04T20:45:05.339Z",
               "EditorCaption": ""

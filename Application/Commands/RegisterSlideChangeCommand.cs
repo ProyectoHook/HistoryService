@@ -13,5 +13,7 @@ namespace Application.Commands
         public Guid SessionId { get; set; }
         public SlideSnapshotDto SlideSnapshot { get; set; }
         public List<UserInSessionDto> ConnectedUserIds { get; set; }
+        public Guid UserCreateId { get; set; }
+        public int PresentationId { get; set; }
     }
 }

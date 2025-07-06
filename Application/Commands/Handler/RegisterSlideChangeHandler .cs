@@ -26,7 +26,8 @@ namespace Application.Commands.Handler
                 request.SessionId,
                 request.SlideSnapshot,
                 request.ConnectedUserIds,
-                Guid.Parse("D0E1D9FA-CF43-4673-8B1B-E6A5C2E05129"));
+                request.UserCreateId,
+                request.PresentationId);
 
             return Unit.Value;
         }

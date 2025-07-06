@@ -15,5 +15,7 @@ namespace Application.Request
         public string? AnswerCorrect { get; set; }
         public List<string>? Options { get; set; }
         public List<UserInSessionDto>? ConnectedUserIds { get; set; }
+        public Guid UserCreateId { get; set; }
+        public int presentationId { get; set; }
     }
 }
