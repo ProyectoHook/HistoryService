@@ -39,6 +39,29 @@ builder.Services.AddAuthentication(options =>
      };
  });
 
+
+// Configuración de CORS
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      policy =>
+                      {
+                          policy.WithOrigins("http://localhost:5500",
+                                             "http://127.0.0.1:5500",
+                                             "http://127.0.0.1:5501",
+                                             "https://127.0.0.1:5500",
+                                             "http://127.0.0.1:3000",
+                                             "https://slidex-front-end.vercel.app")
+                                .AllowAnyHeader()
+                                .AllowAnyMethod()
+                                .AllowCredentials(); // Si usás credenciales
+                      });
+
+});
+
+
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
@@ -63,7 +86,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
+
+app.UseRouting();             // OBLIGATORIO para CORS y endpoints
+
+app.UseCors(MyAllowSpecificOrigins);  // CORS debe ir antes de autenticación
+
+app.UseAuthentication();      // Autenticación después de CORS
 
 app.UseAuthorization();
 
