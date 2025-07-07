@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Infrastructrure.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class initv1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -71,7 +71,8 @@ namespace Infrastructrure.Migrations
                     SlideHistoryId = table.Column<int>(type: "int", nullable: false),
                     Timestamp = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UserAnswer = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TimeElapsed = table.Column<TimeSpan>(type: "time", nullable: true)
+                    TimeElapsed = table.Column<TimeSpan>(type: "time", nullable: true),
+                    PresentationId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

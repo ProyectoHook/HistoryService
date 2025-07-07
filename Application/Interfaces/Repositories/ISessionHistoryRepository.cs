@@ -17,5 +17,7 @@ namespace Application.Interfaces.Repositories
         Task<IEnumerable<UserHistory>> GetUsersInSessionAsync(Guid sessionId);
         Task<SessionReconstructionDto> ReconstructSessionAsync(Guid sessionId);
 
+        Task<List<SessionHistory>> GetSessionsByPresentation(int presentationId);
+
     }
 }

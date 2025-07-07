@@ -3,7 +3,6 @@ using Application.Interfaces.Repositories;
 using Infrastructrure.Persistence;
 using Infrastructrure.Repositories;
 using MediatR;
-using Application;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;

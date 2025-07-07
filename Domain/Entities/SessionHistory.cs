@@ -22,7 +22,7 @@ namespace Domain.Entities
         public DateTime Timestamp { get; set; }
 
         public string? UserAnswer { get; set; }      // Solo si responde
-        public TimeSpan? TimeElapsed { get; set; }   // Tiempo en responder
+        public TimeSpan? TimeElapsed { get; set; }   // Tiempo en responder 
         public int PresentationId { get; set; } // Identificador de la presentación
     }
 

@@ -64,17 +64,18 @@ namespace Template.Controllers
             return Ok(stats);
         }
 
-
-
-
         [HttpGet("{sessionId}/metricas")]
         public async Task<ActionResult<SessionReconstructionDto>> ReconstructSession(Guid sessionId)
         {
             var reconstruction = await _mediator.Send(new GetSessionHistoryQuery { SessionId = sessionId });
             return Ok(reconstruction);
+        }
 
-
-
+        [HttpGet("{presentationId}/sessions")]
+        [ProducesResponseType(typeof(SessionsResponse), 200)]
+        public async Task<ActionResult<SessionReconstructionDto>> GetSessions(int presentationId)
+        {
+                return Ok(await _mediator.Send(new GetSessions(presentationId)));
         }
     }
 }

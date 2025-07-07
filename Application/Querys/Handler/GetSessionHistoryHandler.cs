@@ -22,7 +22,5 @@ namespace Application.Querys.Handler
             SessionReconstructionDto sessionHistory = await _sessionHistoryRepository.ReconstructSessionAsync(request.SessionId);
             return sessionHistory;
         }
-
-
     }
 }

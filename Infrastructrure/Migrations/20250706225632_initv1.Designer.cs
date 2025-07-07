@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructrure.Migrations
 {
     [DbContext(typeof(ServiceContext))]
-    [Migration("20250706014727_update")]
-    partial class update
+    [Migration("20250706225632_initv1")]
+    partial class initv1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

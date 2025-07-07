@@ -272,6 +272,13 @@ namespace Infrastructrure.Repositories
             return result;
         }
 
-
+        public async Task<List<SessionHistory>> GetSessionsByPresentation(int presentationId)
+        {
+            return await _context.SessionHistories
+                .Where(h => h.PresentationId == presentationId)
+                .GroupBy(h => h.SessionId)
+                .Select(g => g.First()) 
+                .ToListAsync();
+        }
     }
 }
